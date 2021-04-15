@@ -1,8 +1,7 @@
 name: keyboard_detection_plugin
 description: A new Flutter plugin.
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/raghut/third-party-keyboard-detection-flutter-plugin/tree/main
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

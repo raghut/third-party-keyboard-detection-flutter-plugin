@@ -14,4 +14,9 @@ class KeyboardDetectionPlugin {
     final bool status = await _channel.invokeMethod('isThirdPartyKeyboard');
     return status;
   }
+
+  ///Open the system keyboard manager to change the keyboard.
+  static Future<void> get openKeyboardChangeManager async {
+    _channel.invokeMethod('openKeyboardChangeManager');
+  }
 }

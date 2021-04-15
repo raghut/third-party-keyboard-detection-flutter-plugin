@@ -2,11 +2,13 @@ package com.rgu.keyboard_detection_plugin
 
 import android.annotation.TargetApi
 import android.content.Context
+import android.content.Intent
 import android.content.pm.ApplicationInfo
 import android.os.Build
 import android.provider.Settings
 import android.view.inputmethod.InputMethodManager
 import androidx.annotation.NonNull
+import androidx.core.content.ContextCompat.startActivity
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -33,6 +35,8 @@ class KeyboardDetectionPlugin : FlutterPlugin, MethodCallHandler {
             result.success("Android ${android.os.Build.VERSION.RELEASE}")
         } else if (call.method.equals("isThirdPartyKeyboard", true)) {
             result.success(isThirdPartyKeyboardUsing())
+        } else if (call.method.equals("openKeyboardChangeManager", true)) {
+            openSystemKeyboardManager()
         }
     }
 
@@ -62,6 +66,15 @@ class KeyboardDetectionPlugin : FlutterPlugin, MethodCallHandler {
             }
         }
         return false
+    }
+
+    /*
+    * Open the System Keyboard Manager.
+    * */
+    fun openSystemKeyboardManager() {
+        val intent = Intent("android.settings.INPUT_METHOD_SETTINGS")
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(context, intent, null)
     }
 
     override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {

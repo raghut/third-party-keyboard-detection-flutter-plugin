@@ -25,11 +25,12 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-    String keyboardErrorStatusMsg =' Failed to get the keyboard status';
+    String keyboardErrorStatusMsg = ' Failed to get the keyboard status';
     bool isThirdPartyKeyboardUsing;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      isThirdPartyKeyboardUsing = await KeyboardDetectionPlugin.isThirdPartyKeyboardUsing;
+      isThirdPartyKeyboardUsing =
+          await KeyboardDetectionPlugin.isThirdPartyKeyboardUsing;
     } on PlatformException {
       keyboardErrorStatusMsg = 'Failed to get the keyboard status.';
     }
@@ -40,7 +41,7 @@ class _MyAppState extends State<MyApp> {
     if (!mounted) return;
 
     setState(() {
-      _isThirdPartyKeyboardUsing =  isThirdPartyKeyboardUsing;
+      _isThirdPartyKeyboardUsing = isThirdPartyKeyboardUsing;
     });
   }
 
@@ -52,7 +53,18 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('ThirdPartyKeyboardStatus: $_isThirdPartyKeyboardUsing\n$keyboardErrorStatusMsg'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                  'ThirdPartyKeyboardStatus: $_isThirdPartyKeyboardUsing\n$keyboardErrorStatusMsg'),
+              RaisedButton(
+                onPressed: () =>
+                    {KeyboardDetectionPlugin.openKeyboardChangeManager},
+                child: Text("Open Keyboard Manager"),
+              )
+            ],
+          ),
         ),
       ),
     );

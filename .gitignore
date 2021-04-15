@@ -19,3 +19,50 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+
+#generated files are ignored
+
+.DS_Store
+
+.atom/
+.buildlog/
+.history
+.svn/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# Web related
+lib/generated_plugin_registrant.dart
+
+/ios/Flutter/Debug.xcconfig
+/ios/Flutter/Release.xcconfig
+
+
+#pubspec.lock
+ios/*.framework/
+ios/arm64/
+ios/armv7/
+example/ios/Runner/GoogleMaps.framework/

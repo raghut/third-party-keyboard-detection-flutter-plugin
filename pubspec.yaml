@@ -1,7 +1,6 @@
 name: keyboard_detection_plugin
 description: This plugin helps to detect whether the user is using System Keyboard or Third party keyboard in Android device.
-  And it will provide functionality to open system keyboard manager to change keyboard.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/raghut/third-party-keyboard-detection-flutter-plugin/tree/main
 
 environment:

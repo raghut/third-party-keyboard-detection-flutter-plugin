@@ -10,3 +10,7 @@
 ## 0.0.3
 
 * Fix hyper link in readme file
+
+## 0.0.4
+
+* Fix hyper link reference in readme file

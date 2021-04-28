@@ -17,7 +17,7 @@ Add this to your package's pubspec.yaml file:
 dependencies:
   keyboard_detection_plugin: <latest version>
 ```
-Get the latest version from [here](https://github.com/raghut/third-party-keyboard-detection-flutter-plugin/releases/tag/v0.0.1)
+Get the latest version from [here](https://github.com/raghut/third-party-keyboard-detection-flutter-plugin/releases)
 
 ## How this plugin will help?
 This plugin is for only Android. We can enforce to use system default keyboard in iOS.

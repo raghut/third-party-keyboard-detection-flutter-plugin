@@ -1,3 +1,8 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* To detect third party keyboard
+* To open android keyboard manager.
+
+## 0.0.2
+
+* Update Readme file content with proper description.

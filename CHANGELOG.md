@@ -6,3 +6,7 @@
 ## 0.0.2
 
 * Update Readme file content with proper description.
+
+## 0.0.3
+
+* Fix hyper link in readme file

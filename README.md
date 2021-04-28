@@ -1,6 +1,6 @@
 # About
 
-This plugin helps to detect whether the user is using System Keyboard or Thirdparty keyboard in Android device.
+This plugin helps to detect whether the user is using System Keyboard or Third party keyboard in Android device.
 And it will provide functionality to open system keyboard manager to change keyboard.
 
 
@@ -9,7 +9,7 @@ And it will provide functionality to open system keyboard manager to change keyb
 
 - Today, you use the keyboard to enter the login credentials for all your social networking and mobile banking websites. So, an unsafe keyboard application serves the purpose of someone constantly looking over your shoulder into your screen. 
 - This constant monitor of the on-screen items will inadvertently lead to a data leak wherein the app owners get an instant access to each and everything that you type on your phone.
-- If your application has requirement to avoid this secuirty risk then by using this plugin you can alert the user or block the functionality of your app.
+- If your application has requirement to avoid this security risk then by using this plugin you can alert the user or block the functionality of your app.
 
 ## Install
 Add this to your package's pubspec.yaml file:
@@ -23,7 +23,7 @@ Get the latest version from ![here](https://github.com/raghut/third-party-keyboa
 This plugin is for only Android. We can enforce to use system default keyboard in iOS.
 ### Android: 
 - We can't enforce Android System to use system keyboard dynamically by doing code level changes in Android app.
-- We can only detect whether the user is using thirdparty keyboard or not. Developer can show warning message or blocked screen to the user.
+- We can only detect whether the user is using third party keyboard or not. Developer can show warning message or blocked screen to the user.
 - It will provide functionality to open Android system keyboard manager.
 #### Usage
 
